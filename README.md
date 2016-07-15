@@ -10,10 +10,24 @@ I'm using Mac OSX. In the future, I can add more fleshed out instructions for th
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-### Get pip and Flask
+### Get pip
 ```
 sudo easy_install pip
+```
+
+### Get flask and sqlalchemy
+```
 pip install flask
+pip install sqlalchemy
+pip install Flask-SQLAlchemy
+```
+
+### Set up mysql locally
+
+```mysql
+create user 'db_user'@'localhost'
+create database sample_db;
+grant all privileges on sample_db.* to 'db_user'@'localhost'
 ```
 
 ### Get node
@@ -54,6 +68,7 @@ gulp
 ```
 
 ## Troubleshooting
+
 * I'm using Sublime, and I don't see the `__init__.py` file.
 
 To see the `__init__.py` file in sublime, you need to go to:  
